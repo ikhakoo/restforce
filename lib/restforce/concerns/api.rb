@@ -242,7 +242,7 @@ module Restforce
       def create(*args)
         create!(*args)
       rescue *exceptions
-        false
+        exceptions.message
       end
       alias_method :insert, :create
 
